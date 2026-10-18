@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="WageTempo Privacy Policy for the iOS app, widgets, Live Activity, and TestFlight beta.">
+  <meta name="description" content="WageTempo Privacy Policy for the iOS app, widgets, Live Activity, subscriptions, and optional support.">
   <meta name="referrer" content="no-referrer">
   <meta name="robots" content="index,follow">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'none'; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
@@ -25,14 +25,14 @@
   </header>
   <main id="content" class="document">
     <h1>WageTempo Privacy Policy</h1>
-    <p class="updated">Last updated: <time datetime="2026-09-03">September 3, 2026</time></p>
+    <p class="updated">Last updated: <time datetime="2026-10-17">October 17, 2026</time></p>
 
-    <p>WageTempo is operated by <strong>Chase Ashby</strong>. This Privacy Policy explains how WageTempo for iOS, including its widgets, Live Activity, and TestFlight beta, handles information.</p>
+    <p>WageTempo is operated by <strong>Chase Ashby</strong>. This Privacy Policy explains how WageTempo for iOS, including its widgets, Live Activity, subscriptions, and any separately invited TestFlight testing, handles information.</p>
 
     <section aria-labelledby="summary">
       <h2 id="summary">Summary</h2>
       <p>WageTempo is a local-first app. The pay, schedule, shift, history, and settings information you enter is stored on your device. WageTempo has no app account, advertising SDK, behavioral analytics SDK, bank connection, or payroll login, and the app does not connect to a developer-operated application service. WageTempo does not automatically send your wages, schedule, shifts, history, tax settings, deductions, paycheck records, or diagnostic reports to us.</p>
-      <p>Information can leave your device when you deliberately export or share it, submit TestFlight feedback, contact us, or use an operating-system or storage-provider feature such as device backup. Those cases are explained below.</p>
+      <p>The app also contacts Apple's App Store (StoreKit) to load Pro prices and check subscription status; this does not send your pay records to us. Information can leave your device when you deliberately export or share it, submit TestFlight feedback, contact us, or use an operating-system or storage-provider feature such as device backup. Those cases are explained below.</p>
     </section>
 
     <section aria-labelledby="on-device">
@@ -45,7 +45,7 @@
         <li>deductions, non-cash benefits, and employer-contribution settings;</li>
         <li>actual-paycheck and calibration entries, saved projections, and reconciliation history;</li>
         <li>privacy, app-lock, widget, Live Activity, notification, and display preferences; and</li>
-        <li>app schema, migration, and beta-acknowledgement state needed to preserve your records across updates.</li>
+        <li>app schema, migration, acknowledgement, and setup-continuity metadata needed to preserve your records across updates.</li>
       </ul>
       <p>This information is used on your device to calculate and display earnings estimates, maintain history, restore app state, and provide the features you select. WageTempo does not transmit it to a server controlled by us.</p>
       <p>WageTempo has no dedicated field for, and does not intentionally ask you to enter, a Social Security number, bank-account credentials, payroll-service password, full date of birth, or full home address. Do not put that information in an optional name, label, or notes field; text you choose to enter there is stored locally and is included in a full backup you export.</p>
@@ -61,20 +61,29 @@
 
     <section aria-labelledby="permissions">
       <h2 id="permissions">Permissions and Apple system services</h2>
-      <p>WageTempo may use these Apple-provided services when you choose the related feature:</p>
+      <p>WageTempo uses Apple's StoreKit to check subscription information as described below. It may also use the following Apple-provided services when you choose the related feature:</p>
       <ul>
         <li><strong>Notifications:</strong> WageTempo requests permission only after an in-app explanation and schedules selected reminders locally. You can change notification permission in iOS Settings.</li>
         <li><strong>Face ID, Touch ID, or device passcode:</strong> Optional App Lock asks iOS to authenticate the device owner. Apple performs the authentication. WageTempo does not receive or store your biometric template or device passcode.</li>
         <li><strong>Widgets and Live Activities:</strong> iOS presents the privacy-controlled local snapshot described above.</li>
+        <li><strong>Subscriptions:</strong> Apple provides StoreKit, purchase authentication, and subscription billing as described below.</li>
       </ul>
       <p>WageTempo does not include a third-party advertising, tracking, or analytics SDK. Its code does not automatically upload usage events or diagnostics to us. Apple may process device, App Store, and TestFlight information under your Apple settings and Apple's own privacy terms.</p>
+    </section>
+
+    <section aria-labelledby="subscriptions">
+      <h2 id="subscriptions">Subscriptions and purchases</h2>
+      <p>WageTempo Pro uses Apple's App Store and StoreKit. Apple processes purchases, payment authentication, and subscription billing under Apple's privacy policy. WageTempo does not receive your payment card details or Apple Account password.</p>
+      <p>The app requests current Pro prices and subscription status when it opens. It checks status when it returns to the foreground, as Apple reports subscription changes, and periodically while active Pro access is displayed. Purchasing, restoring, and managing a subscription also use Apple's services. Apple manages the associated network requests and caches. WageTempo has no developer-operated server that receives receipts or your local pay records.</p>
+      <p>The app checks verified subscription status on your device. It does not write that status into your payroll document, widget snapshot, or optional diagnostic report. Exported backups may contain setup-continuity records so previously saved setups keep working; those records are not proof of purchase and do not grant a subscription.</p>
+      <p>Ending a subscription does not delete your stored records. Existing advanced setups remain available and keep calculating; new advanced setups and analyses require active Pro access. Quick Percentage and core tracking stay free.</p>
     </section>
 
     <section aria-labelledby="sharing">
       <h2 id="sharing">Backups, imports, diagnostics, and other sharing you initiate</h2>
       <p>You can deliberately export a versioned JSON backup through the iOS document picker. The backup can contain the WageTempo information stored in your personal workspace. Once you save or share an exported file, the destination you chose—such as Files, iCloud Drive, email, Messages, or another app—controls its storage and retention. WageTempo cannot delete those outside copies for you.</p>
       <p>You can deliberately import a compatible backup. WageTempo validates and migrates the file locally before replacing local app state.</p>
-      <p>You can also ask WageTempo to prepare a privacy-safe diagnostic report. The report is generated locally, shown to you for review, and includes allow-listed app/build, iOS, schema, feature-state, and record-count information. It excludes your name, employer, wage and salary amounts, tax and deduction amounts, schedules, stored shift times, notes, and record identifiers. Nothing is shared unless you choose a destination. The destination's privacy terms apply after you share it.</p>
+      <p>You can also ask WageTempo to prepare a privacy-safe diagnostic report. The report is generated locally, shown to you for review, and includes allow-listed app/build, distribution-channel, source-build, iOS, schema, feature-state, and record-count information, plus its generation time. It excludes your name, employer, wage and salary amounts, tax and deduction amounts, schedules, stored shift times, notes, and record identifiers. Nothing is shared unless you choose a destination. The destination's privacy terms apply after you share it.</p>
       <p>Your device or Apple account may include app data in operating-system backups according to your iOS and iCloud settings. We do not operate or have access to those backups.</p>
     </section>
 
@@ -98,11 +107,12 @@
       <p>You control the records stored by WageTempo:</p>
       <ul>
         <li><strong>Start Over</strong> removes the personal workspace and returns the app to blank onboarding.</li>
-        <li><strong>Delete All Data</strong> removes WageTempo's substantive local app document and shared widget/command data, asks iOS to end current WageTempo Live Activities, and cancels pending WageTempo notifications through the app's deletion flow. It does not reset your system permission choices, delete previously delivered notifications, erase TestFlight submissions, or delete copies stored elsewhere.</li>
+        <li><strong>Delete All Data</strong> removes the substantive local app document and creates an empty store, and asks to clear shared widget/command data, end current Live Activities, and cancel pending notifications. It does not reset your system permission choices, delete previously delivered notifications, erase TestFlight submissions, or delete copies stored elsewhere.</li>
         <li>You can disable WageTempo notifications in iOS Settings and change privacy, App Lock, widget, and Live Activity preferences inside the app.</li>
         <li>You can avoid sending TestFlight feedback, diagnostic reports, backups, or support messages.</li>
       </ul>
       <p>Deleting the app is controlled by iOS. If you want to use WageTempo's in-app deletion flow, use <strong>Settings › Privacy &amp; Data › Delete All Data</strong> before deleting the app. Deleting WageTempo does not delete backups or messages you previously saved or shared elsewhere; delete those from the destination where you placed them.</p>
+      <p>Deleting data or the app does not cancel a WageTempo Pro subscription. Manage or cancel it in your Apple Account subscription settings.</p>
       <p>To ask about, access, correct, or delete personal information that you deliberately sent to us, email <a class="email" href="mailto:chase@ashbywebsystems.com">chase@ashbywebsystems.com</a>. Describe the report or contact you want us to locate without resending sensitive pay information. We may need limited information to verify the request. We cannot retrieve or delete information that remains only on your device or in a third-party account that we do not control.</p>
       <p>You may also withdraw permission for us to continue using feedback you deliberately sent by emailing that address. We will honor the request except where retention remains reasonably necessary for security, legal obligations, or a dispute.</p>
     </section>
@@ -116,7 +126,7 @@
       <h2 id="providers">Service providers and destinations you choose</h2>
       <p>The relevant third parties are:</p>
       <ul>
-        <li><strong>Apple</strong>, which provides iOS, App Store, TestFlight, notifications, Local Authentication, widgets, Live Activities, document sharing, and optional iCloud/device-backup services; and</li>
+        <li><strong>Apple</strong>, which provides iOS, App Store, StoreKit and subscription billing, TestFlight, notifications, Local Authentication, widgets, Live Activities, document sharing, and optional iCloud/device-backup services; and</li>
         <li><strong>GitHub</strong>, which may host our access-controlled, sanitized issue records and the public static policy page.</li>
       </ul>
       <p>Other apps or services receive WageTempo data only when you choose them as an export or sharing destination. Their privacy policies and security practices apply to information you send to them.</p>
